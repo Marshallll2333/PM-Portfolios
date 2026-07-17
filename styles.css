@@ -116,6 +116,7 @@ h1 {
 .card a {
   color: var(--primary);
   text-decoration: none;
+  overflow-wrap: anywhere;
 }
 
 .project p {
@@ -124,6 +125,14 @@ h1 {
 
 .project-example {
   margin-top: 0.7rem;
+}
+
+.featured-project {
+  margin-bottom: 1rem;
+}
+
+.vibe-projects {
+  align-items: start;
 }
 
 .project-example summary {
@@ -141,6 +150,22 @@ h1 {
   margin-top: 0.75rem;
   border-radius: 10px;
   border: 1px solid var(--border);
+}
+
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.project-image-link {
+  display: block;
+}
+
+.project-gallery .project-image {
+  display: block;
+  margin-top: 0;
 }
 
 .project-image-placeholder {
@@ -230,7 +255,8 @@ h1 {
 
 @media (max-width: 900px) {
   .grid.two,
-  .grid.three {
+  .grid.three,
+  .project-gallery {
     grid-template-columns: 1fr;
   }
 
